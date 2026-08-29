@@ -17,7 +17,7 @@ Source organization: `file-tunnel`
 
 | Source | Commit | Branch observed |
 |---|---:|---|
-| `file-tunnel/ftnl-ui-components` | `b675551b6152da73452e2b4073004d5022487c3b` | `main` |
+| `file-tunnel/ftnl-ui-components` | `cbcd1855b249aa0de9a8d0d6208ff8676ccb796a` | `main` |
 
 ## Dependency lanes
 
@@ -27,5 +27,5 @@ Source organization: `file-tunnel`
 
 ## Running
 
-The pull-request workflow validates the generated contract without cross-organization credentials. Full integration is intentionally release-gated until required source repositories and organization read credentials are present. Run the profile-specific checks recorded in `test-plan.json` after materializing the submodule, Zed, or native-package lane.
+The pull-request workflow validates the generated contract without cross-organization credentials. Product-specific files outside the generated file set are preserved and must add executable assertions without weakening the base contract. Full integration is intentionally release-gated until required source repositories and organization read credentials are present. The generic protected lane reports source-access status only; source certification requires a product-specific executable overlay. A skipped integration job is not source certification. Run the profile-specific checks recorded in `test-plan.json` after materializing the submodule, Zed, or native-package lane.
 
